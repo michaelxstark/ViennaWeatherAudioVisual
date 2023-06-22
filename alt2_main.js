@@ -132,7 +132,7 @@ function draw() {
       shininess(2);
 
       textScreen = createGraphics(600, 600);
-      textScreen.textSize(20);
+      textScreen.textSize(18);
 
       textScreen.text(year, 50, 50);
 
