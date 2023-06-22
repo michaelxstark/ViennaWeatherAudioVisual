@@ -153,7 +153,7 @@ function draw() {
         textScreen.text(avgTemp +  "\u00B0" + "C", 100, -200);
       }
 
-      image(textScreen, 0, 0);
+      image(textScreen, -300, -300);
 
       // yearcounter
       //textFont('Source Code Pro');
