@@ -85,11 +85,11 @@ let textScreen;
 let fontLoaded = false;
 
 
-function drawText(font) {
-  fontLoaded = true;
-  textFont(font, 22);
-  fill(0);
-}
+//function drawText(font) {
+//  fontLoaded = true;
+//  textFont(font, 22);
+//  fill(0);
+//}
 
 
 function preload(){
@@ -104,11 +104,12 @@ function setup() {
   //button.mousePressed(() => counter = 0);
 
   let canvas = createCanvas(600, 600, WEBGL);
+  textScreen = createGraphics(600, 600);
 
   //canvas.position(400, 100);
   //canvas.class("lemon");
 
-  loadFont("Lato", drawText);
+  // loadFont("Lato", drawText);
 
   noFill();
 }
@@ -132,27 +133,27 @@ function draw() {
       directionalLight(255, 200, 100, -1, 0, -2);
       shininess(2);
 
-      text(year, -200, -200);
+      textScreen.text(year, -200, -200);
 
       tempSplit = aTstr.split(".");
 
       if (tempSplit[0].length == 1 && tempSplit[1].length == 2){
-        text("0" + avgTemp +  "\u00B0" + "C", 100, -200);
+        textScreen.text("0" + avgTemp +  "\u00B0" + "C", 100, -200);
       }
 
       else if (tempSplit[0].length == 1 && tempSplit[1].length == 1){
-        text("0" + avgTemp + "0" + "\u00B0" + "C", 100, -200);
+        textScreen.text("0" + avgTemp + "0" + "\u00B0" + "C", 100, -200);
       }
 
       else if (tempSplit[0].length == 2 && tempSplit[1].length == 1){
-        text(avgTemp + "0" + "\u00B0" + "C", 100, -200);
+        textScreen.text(avgTemp + "0" + "\u00B0" + "C", 100, -200);
       }
 
       else{
-        text(avgTemp +  "\u00B0" + "C", 100, -200);
+        textScreen.text(avgTemp +  "\u00B0" + "C", 100, -200);
       }
 
-
+      image(textScreen, 0, 0);
 
       // yearcounter
       //textFont('Source Code Pro');
