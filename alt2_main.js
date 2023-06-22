@@ -108,7 +108,7 @@ function setup() {
   //canvas.position(400, 100);
   //canvas.class("lemon");
 
-  loadFont("Arial.ttf", drawText);
+  loadFont("https://github.com/michaelxstark/ViennaWeatherAudioVisual/blob/main/Arialn.ttf", drawText);
 
   noFill();
 }
