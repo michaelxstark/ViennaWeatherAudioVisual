@@ -104,7 +104,6 @@ function setup() {
   //button.mousePressed(() => counter = 0);
 
   let canvas = createCanvas(600, 600, WEBGL);
-  textScreen = createGraphics(600, 600);
 
   //canvas.position(400, 100);
   //canvas.class("lemon");
@@ -124,16 +123,9 @@ function draw() {
       let avgTemp = row.get("AVG_TEMP");
       let aTstr = row.get("AVG_TEMP").toString();
       // console.log(year);
+      textScreen = createGraphics(600, 600);
 
-
-
-      background(255);
-      ambientLight(255);
-      ambientMaterial(100);
-      directionalLight(255, 200, 100, -1, 0, -2);
-      shininess(2);
-
-      textScreen.text(year, 200, 200);
+      textScreen.text(year, 500, 200);
 
       tempSplit = aTstr.split(".");
 
@@ -152,6 +144,13 @@ function draw() {
       else{
         textScreen.text(avgTemp +  "\u00B0" + "C", 100, 200);
       }
+
+
+      background(255);
+      ambientLight(255);
+      ambientMaterial(100);
+      directionalLight(255, 200, 100, -1, 0, -2);
+      shininess(2);
 
       image(textScreen, -300, -300);
 
