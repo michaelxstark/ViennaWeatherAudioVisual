@@ -1,5 +1,4 @@
 
-
 function startAudio(){
   Tone.start();
   console.log("Audio has Started");
