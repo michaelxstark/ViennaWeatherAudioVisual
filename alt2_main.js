@@ -151,9 +151,10 @@ function draw() {
       ambientMaterial(100);
       directionalLight(255, 200, 100, -1, 0, -2);
       shininess(2);
-
+      drawingContext.disable(drawingContext.DEPTH_TEST)
+      drawingContext.enable(drawingContext.BLEND)
       image(textScreen, -300, -300);
-
+      drawingContext.enable(drawingContext.DEPTH_TEST)
       // yearcounter
       //textFont('Source Code Pro');
       //textAlign(CENTER);
