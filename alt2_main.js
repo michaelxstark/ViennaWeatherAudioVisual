@@ -132,27 +132,28 @@ function draw() {
       shininess(2);
 
       textScreen = createGraphics(600, 600);
+      textScreen.textSize(20);
 
-      textScreen.text(year, 100, 100);
+      textScreen.text(year, 50, 50);
 
       tempSplit = aTstr.split(".");
 
       if (tempSplit[0].length == 1 && tempSplit[1].length == 2){
-        textScreen.text("0" + avgTemp +  "\u00B0" + "C", 500, 100);
+        textScreen.text("0" + avgTemp +  "\u00B0" + "C", 500, 50);
       }
 
       else if (tempSplit[0].length == 1 && tempSplit[1].length == 1){
-        textScreen.text("0" + avgTemp + "0" + "\u00B0" + "C", 500, 100);
+        textScreen.text("0" + avgTemp + "0" + "\u00B0" + "C", 500, 50);
       }
 
       else if (tempSplit[0].length == 2 && tempSplit[1].length == 1){
-        textScreen.text(avgTemp + "0" + "\u00B0" + "C", 500, 100);
+        textScreen.text(avgTemp + "0" + "\u00B0" + "C", 500, 50);
       }
 
       else{
-        textScreen.text(avgTemp +  "\u00B0" + "C", 500, 100);
+        textScreen.text(avgTemp +  "\u00B0" + "C", 500, 50);
       }
-      
+
       drawingContext.disable(drawingContext.DEPTH_TEST)
       drawingContext.enable(drawingContext.BLEND)
       image(textScreen, -300, -300);
