@@ -115,7 +115,7 @@ function setup() {
 }
 
 function draw() {
-  if (gameStarted && fontLoaded){
+  if (gameStarted){
     console.log(gameStarted);
     // speed fo viz
     if(frameCount % 30 == 0){
