@@ -109,7 +109,7 @@ function setup() {
   //canvas.position(400, 100);
   //canvas.class("lemon");
 
-  loadFont('Arial Unicode.ttf', drawText);
+  loadFont("Arial.ttf", drawText);
 
   noFill();
 }
