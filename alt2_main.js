@@ -123,6 +123,14 @@ function draw() {
       let avgTemp = row.get("AVG_TEMP");
       let aTstr = row.get("AVG_TEMP").toString();
       // console.log(year);
+
+
+      background(255);
+      ambientLight(255);
+      ambientMaterial(100);
+      directionalLight(255, 200, 100, -1, 0, -2);
+      shininess(2);
+
       textScreen = createGraphics(600, 600);
 
       textScreen.text(year, 100, 100);
@@ -144,13 +152,7 @@ function draw() {
       else{
         textScreen.text(avgTemp +  "\u00B0" + "C", 500, 100);
       }
-
-
-      background(255);
-      ambientLight(255);
-      ambientMaterial(100);
-      directionalLight(255, 200, 100, -1, 0, -2);
-      shininess(2);
+      
       drawingContext.disable(drawingContext.DEPTH_TEST)
       drawingContext.enable(drawingContext.BLEND)
       image(textScreen, -300, -300);
