@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <script src="http://unpkg.com/tone"></script>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script>
+  <script type="text/javascript" src="alt2_main.js"></script>
+  <title>Vienna Weather Sonification</title>
+  <meta name="description" content="Vienna_Son">
+  <meta name="keywords" content="Vienna Data Sonification">
+</head>
+<body>
+  <h1>Vienna Weather Data Sonification</h1>
+  <div class="introText">
+    <p>You are going to experience an audiovisual representation of data.</p>
+    <p>The underlying data is the average temperature in Vienna since 1873.</p>
+    <p>You will see a three-dimensional, rotating shape and hear a chord.</p>
+    <p>The shape will get bigger and more complex the higher the temperature gets.</p>
+    <p>Also the sound will get more complex the higher the temperature gets.</p>
+    <p>To start the experience you need to activate the audio in your browser by pressing the first button.</p>
+    <p>Then you just press start.</p>
+  </div>
+  <div class="buttons">
+    <button id="b1" onclick="startAudio()">Activate Audio</button>
+    <button id="b2" onclick="startAudioVisLoop()">Start Audiovisual Loop</button>
+    <button id="b3" onclick="stopTone()">Stop Audiovisual Loop</button>
+  </div>
+</body>
+</html>
