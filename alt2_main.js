@@ -139,24 +139,24 @@ function draw() {
       //textScreen = createGraphics(600, 600);
       //textScreen.textSize(18);
 
-      text(year, -200, -200);
+      text(year, -200, -250);
 
       tempSplit = aTstr.split(".");
 
       if (tempSplit[0].length == 1 && tempSplit[1].length == 2){
-        text("0" + avgTemp +  "\u00B0" + "C", 150, -200);
+        text("0" + avgTemp +  "\u00B0" + "C", 150, -250);
       }
 
       else if (tempSplit[0].length == 1 && tempSplit[1].length == 1){
-        text("0" + avgTemp + "0" + "\u00B0" + "C", 150, -200);
+        text("0" + avgTemp + "0" + "\u00B0" + "C", 150, -250);
       }
 
       else if (tempSplit[0].length == 2 && tempSplit[1].length == 1){
-        text(avgTemp + "0" + "\u00B0" + "C", 150, -200);
+        text(avgTemp + "0" + "\u00B0" + "C", 150, -250);
       }
 
       else{
-        text(avgTemp +  "\u00B0" + "C", 150, -200);
+        text(avgTemp +  "\u00B0" + "C", 150, -250);
       }
 
       //drawingContext.disable(drawingContext.DEPTH_TEST)
