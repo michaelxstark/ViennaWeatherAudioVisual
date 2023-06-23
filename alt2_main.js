@@ -106,7 +106,7 @@ function setup() {
   //button.mousePressed(() => counter = 0);
 
   let canvas = createCanvas(600, 600, WEBGL);
-  textFont(myFont);
+  textFont(cFont);
   textSize(36);
   //canvas.position(400, 100);
   //canvas.class("lemon");
