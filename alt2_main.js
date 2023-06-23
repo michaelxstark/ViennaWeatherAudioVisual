@@ -90,7 +90,7 @@ let textScreen;
 //  textFont(font, 22);
 //  fill(0);
 //}
-let = cFont;
+//let = cFont;
 
 
 function preload(){
@@ -106,7 +106,7 @@ function setup() {
   //button.mousePressed(() => counter = 0);
 
   let canvas = createCanvas(600, 600, WEBGL);
-  textFont(cFont);
+  //textFont(cFont);
   textSize(36);
   //canvas.position(400, 100);
   //canvas.class("lemon");
@@ -137,24 +137,24 @@ function draw() {
       //textScreen = createGraphics(600, 600);
       //textScreen.textSize(18);
 
-      text(year, 50, 50);
+      text(year, 50, -100);
 
       tempSplit = aTstr.split(".");
 
       if (tempSplit[0].length == 1 && tempSplit[1].length == 2){
-        text("0" + avgTemp +  "\u00B0" + "C", 500, 50);
+        text("0" + avgTemp +  "\u00B0" + "C", 500, -100);
       }
 
       else if (tempSplit[0].length == 1 && tempSplit[1].length == 1){
-        text("0" + avgTemp + "0" + "\u00B0" + "C", 500, 50);
+        text("0" + avgTemp + "0" + "\u00B0" + "C", 500, -100);
       }
 
       else if (tempSplit[0].length == 2 && tempSplit[1].length == 1){
-        text(avgTemp + "0" + "\u00B0" + "C", 500, 50);
+        text(avgTemp + "0" + "\u00B0" + "C", 500, -100);
       }
 
       else{
-        text(avgTemp +  "\u00B0" + "C", 500, 50);
+        text(avgTemp +  "\u00B0" + "C", 500, -100);
       }
 
       //drawingContext.disable(drawingContext.DEPTH_TEST)
