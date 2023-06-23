@@ -139,7 +139,7 @@ function draw() {
       //textScreen = createGraphics(600, 600);
       //textScreen.textSize(18);
 
-      text(year, -100, -200);
+      text(year, -200, -200);
 
       tempSplit = aTstr.split(".");
 
