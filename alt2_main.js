@@ -82,7 +82,7 @@ filterS3.connect(del);
 del3.connect(revB);
 
 let textScreen;
-let fontLoaded = false;
+// let fontLoaded = false;
 
 
 //function drawText(font) {
@@ -90,10 +90,12 @@ let fontLoaded = false;
 //  textFont(font, 22);
 //  fill(0);
 //}
+let = cFont;
 
 
 function preload(){
   data = loadTable("avg_temp_year.csv", "csv", "header");
+  cFont = loadFont("Arialn.ttf");
 }
 
 
@@ -104,7 +106,8 @@ function setup() {
   //button.mousePressed(() => counter = 0);
 
   let canvas = createCanvas(600, 600, WEBGL);
-
+  textFont(myFont);
+  textSize(36);
   //canvas.position(400, 100);
   //canvas.class("lemon");
 
@@ -131,33 +134,33 @@ function draw() {
       directionalLight(255, 200, 100, -1, 0, -2);
       shininess(2);
 
-      textScreen = createGraphics(600, 600);
-      textScreen.textSize(18);
+      //textScreen = createGraphics(600, 600);
+      //textScreen.textSize(18);
 
-      textScreen.text(year, 50, 50);
+      text(year, 50, 50);
 
       tempSplit = aTstr.split(".");
 
       if (tempSplit[0].length == 1 && tempSplit[1].length == 2){
-        textScreen.text("0" + avgTemp +  "\u00B0" + "C", 500, 50);
+        text("0" + avgTemp +  "\u00B0" + "C", 500, 50);
       }
 
       else if (tempSplit[0].length == 1 && tempSplit[1].length == 1){
-        textScreen.text("0" + avgTemp + "0" + "\u00B0" + "C", 500, 50);
+        text("0" + avgTemp + "0" + "\u00B0" + "C", 500, 50);
       }
 
       else if (tempSplit[0].length == 2 && tempSplit[1].length == 1){
-        textScreen.text(avgTemp + "0" + "\u00B0" + "C", 500, 50);
+        text(avgTemp + "0" + "\u00B0" + "C", 500, 50);
       }
 
       else{
-        textScreen.text(avgTemp +  "\u00B0" + "C", 500, 50);
+        text(avgTemp +  "\u00B0" + "C", 500, 50);
       }
 
-      drawingContext.disable(drawingContext.DEPTH_TEST)
-      drawingContext.enable(drawingContext.BLEND)
-      image(textScreen, -300, -300);
-      drawingContext.enable(drawingContext.DEPTH_TEST)
+      //drawingContext.disable(drawingContext.DEPTH_TEST)
+      //drawingContext.enable(drawingContext.BLEND)
+      //image(textScreen, -300, -300);
+      //drawingContext.enable(drawingContext.DEPTH_TEST)
       // yearcounter
       //textFont('Source Code Pro');
       //textAlign(CENTER);
