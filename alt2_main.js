@@ -114,7 +114,7 @@ function setup() {
 
   // loadFont("Lato", drawText);
 
-  noFill();
+  //noFill();
 }
 
 function draw() {
