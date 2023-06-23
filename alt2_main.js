@@ -109,6 +109,7 @@ function setup() {
   let canvas = createCanvas(600, 600, WEBGL);
   textFont(newFont);
   textSize(18);
+  fill(0);
   //canvas.position(400, 100);
   //canvas.class("lemon");
 
