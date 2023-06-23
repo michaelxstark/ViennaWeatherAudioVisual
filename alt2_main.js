@@ -9,6 +9,7 @@ let i = 0;
 let gameStarted = false;
 
 let counter = 0;
+let newFont = "";
 
 
 
@@ -95,7 +96,7 @@ del3.connect(revB);
 
 function preload(){
   data = loadTable("avg_temp_year.csv", "csv", "header");
-  loadFont("Arialn.ttf");
+  newFont = loadFont("Arialn.ttf");
 }
 
 
@@ -106,7 +107,7 @@ function setup() {
   //button.mousePressed(() => counter = 0);
 
   let canvas = createCanvas(600, 600, WEBGL);
-  textFont("Arialn.ttf");
+  textFont(newFont);
   textSize(18);
   //canvas.position(400, 100);
   //canvas.class("lemon");
