@@ -81,7 +81,7 @@ synth3.connect(filterS);
 filterS3.connect(del);
 del3.connect(revB);
 
-let textScreen;
+// let textScreen;
 // let fontLoaded = false;
 
 
@@ -90,7 +90,7 @@ let textScreen;
 //  textFont(font, 22);
 //  fill(0);
 //}
-//let = cFont;
+let = cFont;
 
 
 function preload(){
@@ -106,8 +106,8 @@ function setup() {
   //button.mousePressed(() => counter = 0);
 
   let canvas = createCanvas(600, 600, WEBGL);
-  //textFont(cFont);
-  textSize(36);
+  textFont(cFont);
+  textSize(18);
   //canvas.position(400, 100);
   //canvas.class("lemon");
 
