@@ -90,12 +90,12 @@ del3.connect(revB);
 //  textFont(font, 22);
 //  fill(0);
 //}
-let = cFont;
+//let = cFont;
 
 
 function preload(){
   data = loadTable("avg_temp_year.csv", "csv", "header");
-  cFont = loadFont("Arialn.ttf");
+  loadFont("Arialn.ttf");
 }
 
 
@@ -106,7 +106,7 @@ function setup() {
   //button.mousePressed(() => counter = 0);
 
   let canvas = createCanvas(600, 600, WEBGL);
-  textFont(cFont);
+  textFont("Arialn.ttf");
   textSize(18);
   //canvas.position(400, 100);
   //canvas.class("lemon");
